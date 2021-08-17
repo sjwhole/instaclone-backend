@@ -1,0 +1,19 @@
+{
+  "name": "instaclone-backend",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjwhole/instaclone-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sjwhole/instaclone-backend/issues"
+  },
+  "homepage": "https://github.com/sjwhole/instaclone-backend#readme"
+}
