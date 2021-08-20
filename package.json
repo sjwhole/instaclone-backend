@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "nodemon --exec babel-node server",
+    "preinstall": "npx npm-force-resolutions",
+    "dev": "nodemon --exec babel-node server --delay 2s",
     "migrate": "npx prisma migrate dev --preview-feature",
     "studio": "npx prisma studio"
   },
@@ -23,12 +24,15 @@
     "@graphql-tools/merge": "^8.0.1",
     "@graphql-tools/schema": "^8.1.1",
     "@prisma/client": "^2.29.1",
-    "apollo-server": "^3.1.2",
+    "apollo-server": "2.x.x",
+    "apollo-server-express": "^2.25.2",
     "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "graphql": "^15.5.1",
     "graphql-tools": "^8.1.0",
     "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.12"
   },
   "devDependencies": {
@@ -39,5 +43,9 @@
     "@types/jsonwebtoken": "^8.5.4",
     "prettier-plugin-prisma": "^2.29.1",
     "prisma": "^2.29.1"
+  },
+  "resolutions": {
+    "fs-capacitor": "^6.2.0",
+    "graphql-upload": "^11.0.0"
   }
 }
