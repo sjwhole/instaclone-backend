@@ -17,9 +17,9 @@ Instaclone Backend.
 - [x] Search Users
 
 ## Photos
-- [ ] Upload Photo
-- [ ] See Photo
-- [ ] See Hashtags
+- [x] Upload Photo
+- [x] See Photo
+- [x] See Hashtags
 - [ ] Search Photos
 - [ ] Edit Photo
 - [ ] Like / Unlike Photo
