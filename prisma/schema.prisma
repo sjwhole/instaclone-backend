@@ -12,15 +12,35 @@ generator client {
 
 model User {
   id        Int      @id @default(autoincrement())
-  firstName String
-  lastName  String?
-  username  String   @unique
-  email     String   @unique
+  firstName String   @db.VarChar(20)
+  lastName  String?  @db.VarChar(20)
+  username  String   @unique @db.VarChar(20)
+  email     String   @unique @db.VarChar(100)
   password  String
   bio       String?
   avatar    String?
+  Photo     Photo[]
   followers User[]   @relation("FollowRelation", references: [id])
   following User[]   @relation("FollowRelation", references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Photo {
+  id        Int       @id @default(autoincrement())
+  user      User      @relation(fields: [userId], references: [id])
+  userId    Int
+  file      String
+  caption   String?
+  hashtags  Hashtag[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Hashtag {
+  id        Int      @id @default(autoincrement())
+  hashtag   String   @unique
+  photos    Photo[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
