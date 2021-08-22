@@ -22,5 +22,6 @@ export default {
 
       return exists !== 0;
     },
+    photos: ({ id }) => client.user.findUnique({ where: { id } }).photos(),
   },
 };
